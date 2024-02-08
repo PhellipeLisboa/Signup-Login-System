@@ -1,7 +1,7 @@
 <?php 
 
-include 'Models/User.php';
-include 'Database.php';
+include '../Models/User.php';
+include '../Core/Database.php';
 
 $db = new Database();
 $db_conn = $db->connect();

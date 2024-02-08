@@ -6,4 +6,4 @@ session_unset();
 session_destroy();
 
 $errorMessage = "Deslogado!";
-Util::redirect('login.php', 'error', $errorMessage);
+Util::redirect('Controller/login.php', 'error', $errorMessage);

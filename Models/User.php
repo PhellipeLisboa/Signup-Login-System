@@ -19,7 +19,7 @@ class User
     function init($user_id)
     {
         try {
-            $sql = 'SELECT * FROM '. $this->table_name.' WHERE user_id=?';
+            $sql = 'SELECT * FROM ' . $this->table_name . ' WHERE user_id=?';
             $stmt = $this->conn->prepare($sql);
             $res = $stmt->execute([$user_id]);
             if ($stmt->rowCount() == 1) {
@@ -40,7 +40,7 @@ class User
     function insert($data)
     {
         try {
-            $sql = 'INSERT INTO '. $this->table_name.'(user_name, user_password, user_full_name, user_email) VALUES(?,?,?,?)';
+            $sql = 'INSERT INTO ' . $this->table_name . '(user_name, user_password, user_full_name, user_email) VALUES(?,?,?,?)';
             $stmt = $this->conn->prepare($sql);
             $res = $stmt->execute($data);
             return $res;
@@ -52,7 +52,7 @@ class User
     function is_username_unique($user_name)
     {
         try {
-            $sql = 'SELECT user_name FROM '. $this->table_name.' WHERE user_name=?';
+            $sql = 'SELECT user_name FROM ' . $this->table_name . ' WHERE user_name=?';
             $stmt = $this->conn->prepare($sql);
             $res = $stmt->execute([$user_name]);
             if ($stmt->rowCount() > 0) {
@@ -68,7 +68,7 @@ class User
     function auth($user_name, $password)
     {
         try {
-            $sql = 'SELECT * FROM '. $this->table_name.' WHERE user_name=?';
+            $sql = 'SELECT * FROM ' . $this->table_name . ' WHERE user_name=?';
             $stmt = $this->conn->prepare($sql);
             $res = $stmt->execute([$user_name]);
             if ($stmt->rowCount() == 1) {
@@ -101,11 +101,12 @@ class User
 
     function getUser()
     {
-        $data = array('user_id' => $this->user_id,
-                      'user_name' => $this->user_name,
-                      'full_name' => $this->user_full_name,
-                      'user_email' => $this->user_email);
+        $data = array(
+            'user_id' => $this->user_id,
+            'user_name' => $this->user_name,
+            'full_name' => $this->user_full_name,
+            'user_email' => $this->user_email
+        );
         return $data;
     }
-
 }
