@@ -51,6 +51,7 @@ nav a {
 
 nav a:hover {
     background-color: #061a35;
+    border-radius: 10px;
 }
 
 nav li:first-child {
@@ -122,6 +123,11 @@ nav li:first-child {
     border-radius: 5px;
 }
 
+#contact-message:focus-within {
+    font-weight: bold;
+    border: 3px solid #929292f6;
+}
+
 .form-holder h4 {
     padding: 0 10px;
     font-size: 18px;
@@ -139,6 +145,11 @@ nav li:first-child {
     border: 2px solid #ddd;
     font-size: 15px;
     border-radius: 5px;
+}
+
+.form-group input:focus-within {
+    font-weight: bold;
+    border: 3px solid #929292f6;
 }
 
 .form-group button {
