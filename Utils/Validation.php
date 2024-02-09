@@ -69,4 +69,17 @@ class Validation
             return false;
         }
     }
+
+    static function tel($str)
+    {
+        // ddd -> (**)
+    
+        $tel_regex = "/^\d{2}9\d{8}$/";
+
+        if (preg_match($tel_regex, $str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

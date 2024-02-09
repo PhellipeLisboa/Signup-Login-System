@@ -99,6 +99,29 @@ nav li:first-child {
     text-align: center;
 }
 
+.form-contact {
+    width:750px;
+    max-width: 90%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 2px solid #aaa;
+}
+
+.form-contact h2 {
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#contact-message {
+    width: 100%;
+    padding: 9px;
+    outline: none;
+    border: 2px solid #ddd;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
 .form-holder h4 {
     padding: 0 10px;
     font-size: 18px;
@@ -172,7 +195,7 @@ nav li:first-child {
     text-align: center;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     .hideOnMobile {
         display: none;
     }
@@ -181,7 +204,6 @@ nav li:first-child {
         display: block;
     }
 }
-
 
 @media(max-width: 350px) {
     .sidebar{
